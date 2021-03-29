@@ -29,7 +29,7 @@
     <q-page-container>
 
       <DarkTable />
-      
+      <VisibleColumnsTable />
       
       <router-view />
     </q-page-container>
@@ -39,6 +39,7 @@
 <script>
 
 import DarkTable from '../components/DarkTable';
+import VisibleColumnsTable from '../components/VisibleColumnsTable';
 
 export default {
   
@@ -46,6 +47,7 @@ export default {
 
   components: {
     DarkTable,
+    VisibleColumnsTable,
   },
   
   data () {
