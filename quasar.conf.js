@@ -37,6 +37,8 @@ module.exports = function (/* ctx */) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
+      
+      'material-icons-outlined',
       'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
     ],
@@ -74,11 +76,6 @@ module.exports = function (/* ctx */) {
       port: 8080,
       open: true // opens browser window automatically
     },
-    
-    extras: [
-      'material-icons',
-      'material-icons-outlined',
-    ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
