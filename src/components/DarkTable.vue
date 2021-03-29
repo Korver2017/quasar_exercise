@@ -6,6 +6,7 @@
 <template>
   <div class="q-pa-md">
     <q-table
+      :pagination="pagination"
       title="Treats"
       :data="data"
       :columns="columns"
@@ -156,7 +157,10 @@
             calcium: '12%',
             iron: '6%'
           }
-        ]
+        ],
+        pagination: {
+          rowsPerPage: 100,
+        }
       }
     },
 
