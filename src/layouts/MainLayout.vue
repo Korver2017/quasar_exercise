@@ -28,7 +28,7 @@
         <q-list>
 
           <template v-for="(menuItem, index) in menuList">
-            <q-item :to="menuItem.to" :key="index" clickable :active="menuItem.label === 'Outbox'" v-ripple>
+            <q-item :to="menuItem.to" :key="index" clickable exact v-ripple>
               <q-item-section avatar>
                 <q-icon :name="menuItem.icon" />
               </q-item-section>
@@ -44,10 +44,6 @@
     </q-drawer>
 
     <q-page-container>
-
-      <!-- <DarkTable />
-      <VisibleColumnsTable /> -->
-      
       <router-view />
     </q-page-container>
   </q-layout>
@@ -57,22 +53,22 @@
 
 const menuList = [
   {
-    icon: 'inbox',
-    label: 'Inbox',
+    icon: 'o_apps',
+    label: 'Quasar App',
     separator: true,
     to: '/',
   },
   {
-    icon: 'send',
-    label: 'Outbox',
+    icon: 'o_table_chart',
+    label: 'Dark Table',
     separator: false,
     to: '/dark-table',
   },
   {
-    icon: 'delete',
-    label: 'Trash',
+    icon: 'o_table_chart',
+    label: 'Visible Columns Table',
     separator: false,
-    to: 'QWER',
+    to: '/visible-columns-table',
   },
 ]
 
@@ -90,7 +86,7 @@ export default {
   
   data () {
     return {
-      leftDrawerOpen: false,
+      leftDrawerOpen: true,
       
       menuList,
     }

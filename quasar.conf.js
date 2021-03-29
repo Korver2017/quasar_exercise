@@ -74,6 +74,11 @@ module.exports = function (/* ctx */) {
       port: 8080,
       open: true // opens browser window automatically
     },
+    
+    extras: [
+      'material-icons',
+      'material-icons-outlined',
+    ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
