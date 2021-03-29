@@ -21,13 +21,15 @@
 
     <q-drawer
       v-model="leftDrawerOpen"
-      show-if-above
       bordered
       content-class="bg-grey-1"
     >
     </q-drawer>
 
     <q-page-container>
+
+      <DarkTable />
+      
       <router-view />
     </q-page-container>
   </q-layout>
@@ -35,8 +37,16 @@
 
 <script>
 
+import DarkTable from '../components/DarkTable';
+
 export default {
+  
   name: 'MainLayout',
+
+  components: {
+    DarkTable,
+  },
+  
   data () {
     return {
       leftDrawerOpen: false,
