@@ -28,7 +28,7 @@
         <q-list>
 
           <template v-for="(menuItem, index) in menuList">
-            <q-item :key="index" clickable :active="menuItem.label === 'Outbox'" v-ripple>
+            <q-item :to="menuItem.to" :key="index" clickable :active="menuItem.label === 'Outbox'" v-ripple>
               <q-item-section avatar>
                 <q-icon :name="menuItem.icon" />
               </q-item-section>
@@ -45,8 +45,8 @@
 
     <q-page-container>
 
-      <DarkTable />
-      <VisibleColumnsTable />
+      <!-- <DarkTable />
+      <VisibleColumnsTable /> -->
       
       <router-view />
     </q-page-container>
@@ -59,39 +59,21 @@ const menuList = [
   {
     icon: 'inbox',
     label: 'Inbox',
-    separator: true
+    separator: true,
+    to: '/',
   },
   {
     icon: 'send',
     label: 'Outbox',
-    separator: false
+    separator: false,
+    to: '/dark-table',
   },
   {
     icon: 'delete',
     label: 'Trash',
-    separator: false
+    separator: false,
+    to: 'QWER',
   },
-  {
-    icon: 'error',
-    label: 'Spam',
-    separator: true
-  },
-  {
-    icon: 'settings',
-    label: 'Settings',
-    separator: false
-  },
-  {
-    icon: 'feedback',
-    label: 'Send Feedback',
-    separator: false
-  },
-  {
-    icon: 'help',
-    iconColor: 'primary',
-    label: 'Help',
-    separator: false
-  }
 ]
 
 import DarkTable from '../components/DarkTable';
